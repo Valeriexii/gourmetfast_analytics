@@ -1,5 +1,17 @@
-
+# dbt
 target/
 dbt_packages/
 logs/
+
+# DuckDB
+*.duckdb
+
+# Python
 venv/
+.env/
+
+# Editor
+.vscode/
+
+# macOS
+.DS_Store
