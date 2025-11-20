@@ -1,0 +1,95 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Customer dimension table."
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: "Customer name as captured in the source system."
+
+      - name: email
+        description: "Lowercased, trimmed email address."
+
+      - name: signup_date
+        description: "Date the customer signed up."
+        data_tests:
+          - not_null
+
+  - name: dim_products
+    description: "Product dimension table."
+    columns:
+      - name: product_id
+        description: "Unique identifier for the product."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: product_name
+        description: "Product name as displayed to customers."
+
+      - name: category
+        description: "High-level category for the product."
+
+      - name: price
+        description: "Current unit price of the product."
+        data_tests:
+          - not_null
+
+  - name: fct_orders
+    description: "Fact table at the order grain with quantities and revenue."
+    columns:
+      - name: order_id
+        description: "Business key for the order."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Customer associated with the order."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+
+      - name: product_id
+        description: "Product purchased in the order."
+        data_data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_products')
+                field: product_id
+
+      - name: order_date
+        description: "Date of the order."
+        data_tests:
+          - not_null
+
+      - name: quantity
+        description: "Number of units ordered."
+        data_tests:
+          - not_null
+
+      - name: price
+        description: "Unit price for the product."
+
+      - name: revenue
+        description: "Derived metric: quantity * price."
+        data_tests:
+          - not_null
+
+      - name: status
+        description: "Normalized order status; unknown/raw values mapped to 'UNKNOWN'."
+        data_data_tests:
+          - accepted_values:
+              arguments: 
+                values: ['PENDING', 'SHIPPED', 'CANCELLED', 'COMPLETED', 'DELIVERED', 'RETURNED']
+                severity: warn
