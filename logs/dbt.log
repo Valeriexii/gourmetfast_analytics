@@ -1,0 +1,65 @@
+[0m18:05:18.919105 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c556b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5d3ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5d32b0>]}
+
+
+============================== 18:05:18.924460 | 7bf2c5a9-e1bb-48d3-b40b-de9762ed20fa ==============================
+[0m18:05:18.924460 [info ] [MainThread]: Running with dbt=1.10.15
+[0m18:05:18.924813 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_format': 'default', 'no_print': 'None', 'log_cache_events': 'False', 'static_parser': 'True', 'profiles_dir': '/Users/ValerieXi/.dbt', 'write_json': 'True', 'log_path': 'logs', 'target_path': 'None', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'warn_error': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'None', 'partial_parse': 'True', 'debug': 'False', 'introspect': 'True', 'invocation_command': 'dbt init'}
+[0m18:05:18.933849 [info ] [MainThread]: Creating dbt configuration folder at /Users/ValerieXi/.dbt
+[0m18:05:57.304368 [debug] [MainThread]: Starter project path: /Users/ValerieXi/Documents/Github/dbt-project/venv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m18:05:57.313287 [info ] [MainThread]: 
+Your new dbt project "GourmetFast_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:05:57.313691 [info ] [MainThread]: Setting up your profile.
+[0m18:05:57.314560 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No adapters available. Learn how to install an adapter by going to https://docs.getdbt.com/docs/connect-adapters#install-using-the-cli
+[0m18:05:57.346931 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 38.47611, "process_in_blocks": "0", "process_kernel_time": 0.145601, "process_mem_max_rss": "97615872", "process_out_blocks": "0", "process_user_time": 0.836419}
+[0m18:05:57.347586 [debug] [MainThread]: Command `dbt init` failed at 18:05:57.347481 after 38.48 seconds
+[0m18:05:57.348175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c556b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5f8310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5a7e50>]}
+[0m18:05:57.348652 [debug] [MainThread]: Flushing usage events
+[0m18:05:57.534937 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:31:15.683376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088d7a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093ddc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093dd910>]}
+
+
+============================== 18:31:15.690095 | a542103d-65a4-43e1-9b36-db995b7df9f2 ==============================
+[0m18:31:15.690095 [info ] [MainThread]: Running with dbt=1.10.15
+[0m18:31:15.690445 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'use_colors': 'True', 'write_json': 'True', 'profiles_dir': '/Users/ValerieXi/.dbt', 'quiet': 'False', 'partial_parse': 'True', 'static_parser': 'True', 'empty': 'None', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'invocation_command': 'dbt seed', 'debug': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'log_format': 'default', 'warn_error': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'printer_width': '80', 'indirect_selection': 'eager'}
+[0m18:31:15.690796 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/ValerieXi/Documents/Github/dbt-project/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:31:16.046289 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 0.40290192, "process_in_blocks": "0", "process_kernel_time": 0.139548, "process_mem_max_rss": "106774528", "process_out_blocks": "0", "process_user_time": 0.735861}
+[0m18:31:16.046792 [debug] [MainThread]: Command `dbt seed` failed at 18:31:16.046674 after 0.40 seconds
+[0m18:31:16.047050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093dd940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093de3f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093de780>]}
+[0m18:31:16.047273 [debug] [MainThread]: Flushing usage events
+[0m18:31:16.269623 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:39:10.828604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a81c860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b31db50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b31d8e0>]}
+
+
+============================== 18:39:10.831987 | 199dcd68-83e6-4459-bf35-61e629a539d6 ==============================
+[0m18:39:10.831987 [info ] [MainThread]: Running with dbt=1.10.15
+[0m18:39:10.832327 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'target_path': 'None', 'cache_selected_only': 'False', 'version_check': 'True', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'partial_parse': 'True', 'quiet': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'profiles_dir': '/Users/ValerieXi/.dbt', 'static_parser': 'True', 'no_print': 'None', 'log_cache_events': 'False', 'invocation_command': 'dbt seed', 'log_format': 'default', 'indirect_selection': 'eager', 'introspect': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'log_path': 'logs', 'printer_width': '80'}
+[0m18:39:10.832668 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/ValerieXi/Documents/Github/dbt-project/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:39:10.834594 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 0.046578083, "process_in_blocks": "0", "process_kernel_time": 0.142399, "process_mem_max_rss": "108101632", "process_out_blocks": "0", "process_user_time": 0.714783}
+[0m18:39:10.834871 [debug] [MainThread]: Command `dbt seed` failed at 18:39:10.834825 after 0.05 seconds
+[0m18:39:10.835040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aa38aa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b31d2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b31d8b0>]}
+[0m18:39:10.835196 [debug] [MainThread]: Flushing usage events
+[0m18:39:11.015281 [debug] [MainThread]: An error was encountered while trying to flush usage events
