@@ -23,7 +23,7 @@ select
         else 'UNKNOWN'
     end as status
 from cleaned
--- assume negative quantity means bad data, remove it to clean the dataset
+-- assume negative & 0 quantity means bad data, remove it to clean the dataset
 where quantity > 0
   and order_date is not null
   and order_id is not null
