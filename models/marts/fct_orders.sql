@@ -18,9 +18,6 @@ left join {{ ref('stg_products') }} p
     on o.product_id = p.product_id
 
 {% if is_incremental() %}
-    -- only process orders newer than what we already have
-    where order_date > (
-    select coalesce(max(order_date), date '1900-01-01')
-    from {{ this }}
-    )
+    -- processing orders from yesterday (late arrival) and today
+    where order_date >= (select max(order_date) from {{ this }})
 {% endif %}
