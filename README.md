@@ -9,7 +9,7 @@ The goal is to support key business questions:
 - **Which products are selling the most?**
 - **How are our sales trending over time?**
 
-The project follows modern dbt best practices: sources, staging, core dimensional models, incremental fact tables, and data quality tests.
+The project follows modern dbt best practices: sources, staging, dimensional models, and fact tables, and data quality tests.
 
 ## Core Layer (dim_*, fct_*)
 ### Dimensions
