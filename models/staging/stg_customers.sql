@@ -6,7 +6,7 @@ with cleaned as (
         nullif(trim(name), '')         as customer_name,
         lower(nullif(trim(email), '')) as email,
         try_cast(signup_date as date)  as signup_date
-    from {{ ref('raw_customers') }}
+    from {{ source('main', 'raw_customers') }}
 )
 
 select *

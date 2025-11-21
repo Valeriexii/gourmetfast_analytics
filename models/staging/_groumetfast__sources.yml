@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: main
+    description: "Raw CSV data loaded via dbt seeds."
+    tables:
+      - name: raw_customers
+        description: "Raw customers data from raw_customers.csv seed."
+      - name: raw_products
+        description: "Raw products data from raw_products.csv seed."
+      - name: raw_orders
+        description: "Raw orders data from raw_orders.csv seed."
