@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: main
+  - name: main_raw
     description: "Raw CSV data loaded via dbt seeds."
     tables:
       - name: raw_customers

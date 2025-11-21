@@ -87,8 +87,8 @@ models:
           - not_null
 
       - name: status
-        description: "Normalized order status; unknown/raw values mapped to 'UNKNOWN'."
-        data_data_tests:
+        description: "Normalized order status."
+        data_tests:
           - accepted_values:
               arguments: 
                 values: ['PENDING', 'SHIPPED', 'CANCELLED', 'COMPLETED', 'DELIVERED', 'RETURNED']

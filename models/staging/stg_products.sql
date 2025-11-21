@@ -6,7 +6,7 @@ with cleaned as (
         nullif(trim(name), '')                      as product_name,
         nullif(trim(category), '')                  as category,
         try_cast(price as decimal(18, 2))           as price
-    from {{ source('main', 'raw_products') }}
+    from {{ source('main_raw', 'raw_products') }}
 )
 
 select

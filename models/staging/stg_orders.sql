@@ -8,7 +8,7 @@ with cleaned as (
         try_cast(order_date as date)               as order_date,
         try_cast(quantity as integer)              as quantity,
         upper(trim(status))                        as status_raw
-    from {{ source('main', 'raw_orders') }}
+    from {{ source('main_raw', 'raw_orders') }}
 )
 
 select
