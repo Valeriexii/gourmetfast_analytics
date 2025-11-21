@@ -18,6 +18,7 @@ left join {{ ref('stg_products') }} p
     on o.product_id = p.product_id
 
 {% if is_incremental() %}
+    -- assume dbt runs once a day at 10am EST
     -- processing orders from yesterday (late arrival) and today
     where order_date >= (select max(order_date) from {{ this }})
 {% endif %}
